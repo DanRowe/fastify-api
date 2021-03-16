@@ -1,5 +1,5 @@
 // External Dependancies
-const boom = require('boom')
+const boom = require("@hapi/boom");
 
 // Get Data Models
 const Car = require('../models/Car')

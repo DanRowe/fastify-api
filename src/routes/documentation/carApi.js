@@ -1,30 +1,30 @@
 exports.addCarSchema = {
-  description: 'Create a new car',
-  tags: ['cars'],
-  summary: 'Creates new car with given values',
+  description: "Create a new car",
+  tags: [],
+  summary: "Creates new car with given values",
   body: {
-    type: 'object',
+    type: "object",
     properties: {
-      title: { type: 'string' },
-      brand: { type: 'string' },
-      price: { type: 'string' },
-      age: { type: 'number' },
-      services: { type: 'object' }
-    }
+      title: { type: "string" },
+      brand: { type: "string" },
+      price: { type: "string" },
+      age: { type: "number" },
+      services: { type: "object" },
+    },
   },
   response: {
     200: {
-      description: 'Successful response',
-      type: 'object',
+      description: "Successful response",
+      type: "object",
       properties: {
-        _id: { type: 'string' },
-        title: { type: 'string' },
-        brand: { type: 'string' },
-        price: { type: 'string' },
-        age: { type: 'number' },
-        services: { type: 'object' },
-        __v: { type: 'number' }
-      }
-    }
-  }
-}
+        _id: { type: "string" },
+        title: { type: "string" },
+        brand: { type: "string" },
+        price: { type: "string" },
+        age: { type: "number" },
+        services: { type: "object" },
+        __v: { type: "number" },
+      },
+    },
+  },
+};
