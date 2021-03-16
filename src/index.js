@@ -1,10 +1,5 @@
-// Require the fastify framework and instantiate it
-const fastify = require("fastify")({
-  logger: true,
-});
-
-// Require external modules
-const mongoose = require("mongoose");
+// Import Server
+const fastify = require("./server.js");
 
 // Import Routes
 const routes = require("./routes");
@@ -14,12 +9,6 @@ const swagger = require("./config/swagger");
 
 // Register Swagger
 fastify.register(require("fastify-swagger"), swagger.options);
-
-// Connect to DB
-mongoose
-  .connect("mongodb://localhost/mycargarage")
-  .then(() => console.log("MongoDB connected..."))
-  .catch((err) => console.log(err));
 
 // Loop over each route
 routes.forEach((route, index) => {
